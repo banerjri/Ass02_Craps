@@ -1,8 +1,17 @@
 import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args)
     {
+        Scanner in = new Scanner(System.in);
+        String Choice = "";
+        String Party = "Y - yes\tN - No = ";
+        System.out.print(Party);
+        Choice = in.nextLine();
+        if (Choice.equalsIgnoreCase("Y"))
+        {
         Random rnd = new Random();
         int die1 = rnd.nextInt(6)+1;
         int die2 = rnd.nextInt(6)+1;
@@ -35,5 +44,11 @@ public class Main {
             System.out.println("You lose.");
         }
         System.out.println("Made a point = " +newSum);
+        if(Choice.equalsIgnoreCase("N"))
+            {
+                System.out.println("the game over");
+            }
+        }
+
     }
 }
